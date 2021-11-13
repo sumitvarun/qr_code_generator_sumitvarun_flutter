@@ -1,6 +1,13 @@
+import 'dart:io';
+import 'dart:typed_data';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:flutter/src/material/colors.dart';
+import 'package:share_plus/share_plus.dart';
 
 // ignore: camel_case_types
 class homescreen extends StatefulWidget {
@@ -15,7 +22,8 @@ class _homescreenState extends State<homescreen> {
   static const double _topSectionBottomPadding = 20.0;
   static const double _topSectionHeight = 50.0;
 
-  GlobalKey globalKey = new GlobalKey();
+  final key = GlobalKey();
+  File file;
   String _dataString = "Hello from this QR";
   String _inputErrorText;
   final TextEditingController _textController = TextEditingController();
@@ -26,43 +34,55 @@ class _homescreenState extends State<homescreen> {
       appBar: AppBar(
         backgroundColor: Colors.pinkAccent[400],
         title: Text(
-          "TESLA",
+          "QR CODE GENERATOR",
           style: TextStyle(color: Colors.black),
         ),
       ),
       body: Center(
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              QrImage(
-                data: _dataString,
-                version: QrVersions.auto,
-                size: 320,
-                gapless: false,
-              ),
-              TextField(
-                controller: _textController,
-                decoration: InputDecoration(
-                    border: InputBorder.none,
-                    labelText: 'Enter Name',
-                    hintText: 'Enter Your Name'),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                // ignore: deprecated_member_use
-                child: FlatButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    setState(() {
-                      _dataString = _textController.text;
-                      _inputErrorText = null;
-                    });
-                  },
-                  child: null,
+        child: Column(
+          children: <Widget>[
+            RepaintBoundary(
+              child: Container(
+                color: Colors.white,
+                child: QrImage(
+                  size: 320, //size of the QrImage widget.
+                  data: _dataString,
+                  gapless: false,
                 ),
-              )
-            ],
-          ),
+              ),
+              //QrImage(
+              //data: _dataString,
+              //version: QrVersions.auto,
+              //size: 320,
+              //gapless: false,
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            TextField(
+              controller: _textController,
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  labelText: 'Enter Name',
+                  hintText: 'Enter Your Name'),
+            ),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+              ),
+              onPressed: () async {
+                setState(() {
+                  _dataString = _textController.text;
+                  _inputErrorText = null;
+                });
+              },
+              child: Text("CREATE QR CODE"),
+            ),
+            ElevatedButton(
+              child: Text("Share"),
+              onPressed: () async {},
+            )
+          ],
         ),
       ),
       bottomNavigationBar: BottomAppBar(
