@@ -37,6 +37,14 @@ class _homescreenState extends State<homescreen> {
           "QR CODE GENERATOR",
           style: TextStyle(color: Colors.black),
         ),
+        actions: <Widget>[
+          CircleAvatar(
+            radius: 50,
+            backgroundImage: NetworkImage(
+              'https://user-images.githubusercontent.com/52107131/107118296-13bdd580-68a6-11eb-8513-65c126ae14aa.png',
+            ),
+          )
+        ],
       ),
       body: Center(
         child: Column(
