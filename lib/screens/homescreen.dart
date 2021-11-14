@@ -23,7 +23,6 @@ class _homescreenState extends State<homescreen> {
   static const double _topSectionBottomPadding = 20.0;
   static const double _topSectionHeight = 50.0;
 
-  final key = GlobalKey();
   File file;
   String _dataString = "Hello from this QR";
   String _inputErrorText;
