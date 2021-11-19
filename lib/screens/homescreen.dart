@@ -37,70 +37,68 @@ class _homescreenState extends State<homescreen> {
           "QR CODE GENERATOR",
           style: TextStyle(color: Colors.black),
         ),
-        actions: <Widget>[],
+        centerTitle: true,
+        leading: Icon(Icons.arrow_back),
+        actions: [Icon(Icons.search)],
+        bottom: PreferredSize(
+          child: SizedBox(),
+          preferredSize: Size.fromHeight(200),
+        ),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(2000),
+                bottomRight: Radius.circular(1000))),
       ),
       body: Center(
-        child: Column(
-          children: <Widget>[
-            RepaintBoundary(
-              child: Container(
-                color: Colors.white,
-                child: QrImage(
-                  size: 320, //size of the QrImage widget.
-                  data: _dataString,
-                  gapless: false,
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              RepaintBoundary(
+                child: Container(
+                  color: Colors.white,
+                  child: QrImage(
+                    size: 150, //size of the QrImage widget.
+                    data: _dataString,
+                    gapless: false,
+                  ),
                 ),
+                //QrImage(
+                //data: _dataString,
+                //version: QrVersions.auto,
+                //size: 320,
+                //gapless: false,
               ),
-              //QrImage(
-              //data: _dataString,
-              //version: QrVersions.auto,
-              //size: 320,
-              //gapless: false,
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            TextField(
-              controller: _textController,
-              decoration: InputDecoration(
-                  border: InputBorder.none,
-                  labelText: 'Enter Name',
-                  hintText: 'Enter Your Name'),
-            ),
-            ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+              SizedBox(
+                height: 50,
               ),
-              onPressed: () async {
-                setState(() {
-                  _dataString = _textController.text;
-                  _inputErrorText = null;
-                });
-              },
-              child: Text("CREATE QR CODE"),
-            ),
-            ElevatedButton(
-              child: Text("Share"),
-              onPressed: _captureAndSharePng,
-            )
-          ],
+              TextField(
+                controller: _textController,
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    labelText: 'Enter Name',
+                    hintText: 'Enter Your Name'),
+              ),
+              ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.green),
+                ),
+                onPressed: () async {
+                  setState(() {
+                    _dataString = _textController.text;
+                    _inputErrorText = null;
+                  });
+                },
+                child: Text("CREATE QR CODE"),
+              ),
+              ElevatedButton(
+                child: Text("Share"),
+                onPressed: _captureAndSharePng,
+              )
+            ],
+          ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          children: [
-            IconButton(icon: Icon(Icons.menu), onPressed: () {}),
-            Spacer(),
-            IconButton(icon: Icon(Icons.search), onPressed: () {}),
-            IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {},
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
