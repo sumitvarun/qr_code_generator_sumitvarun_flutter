@@ -32,7 +32,7 @@ class _homescreenState extends State<homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pinkAccent[400],
+        backgroundColor: Colors.greenAccent[400],
         title: Text(
           "QR CODE GENERATOR",
           style: TextStyle(color: Colors.black),
