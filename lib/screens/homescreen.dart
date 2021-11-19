@@ -59,6 +59,8 @@ class _homescreenState extends State<homescreen> {
                     ),
                     CircleAvatar(
                       radius: 50.0,
+                      backgroundImage:
+                          AssetImage("lib/asset/sumitvarunpngcartoon.png"),
                     )
                   ],
                 ),
