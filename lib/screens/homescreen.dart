@@ -41,8 +41,30 @@ class _homescreenState extends State<homescreen> {
         leading: Icon(Icons.arrow_back),
         actions: [Icon(Icons.search)],
         bottom: PreferredSize(
-          child: SizedBox(),
           preferredSize: Size.fromHeight(200),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 50.0, bottom: 40.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      "Generate your QR CODE HERE",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                    ),
+                    CircleAvatar(
+                      radius: 50.0,
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
