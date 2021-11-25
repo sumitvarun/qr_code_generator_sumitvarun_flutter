@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_generator_sumitvarun/screens/qr_generate_page.dart';
+
+import 'screens/homescreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: QrGenerater(),
+      home: HomeScreen(),
     );
   }
 }
