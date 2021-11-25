@@ -37,7 +37,10 @@ class _QrGeneraterState extends State<QrGenerater> {
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
-        leading: Icon(Icons.arrow_back),
+        // leading: Icon(Icons.arrow_back),
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.of(context).pop()),
         actions: [Icon(Icons.search)],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(200),
