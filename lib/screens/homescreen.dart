@@ -20,6 +20,9 @@ class HomeScreen extends StatelessWidget {
           //   icon: Icon(Icons.arrow_back),
           //   onPressed: () => Navigator.of(context).pop()),
           actions: [Icon(Icons.search)],
+          leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () => Navigator.of(context).pop()),
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(200),
             child: Column(
