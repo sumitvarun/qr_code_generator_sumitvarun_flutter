@@ -66,6 +66,11 @@ class HomeScreen extends StatelessWidget {
                           MaterialStateProperty.all<Color>(Colors.blue),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                            side: BorderSide(color: Colors.black)),
+                      ),
                     ),
                     // Within the `FirstRoute` widget
                     onPressed: () {
@@ -87,6 +92,11 @@ class HomeScreen extends StatelessWidget {
                           MaterialStateProperty.all<Color>(Colors.blue),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                            side: BorderSide(color: Colors.black)),
+                      ),
                     ),
                     // Within the `FirstRoute` widget
                     onPressed: () {
