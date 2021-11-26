@@ -63,14 +63,16 @@ class HomeScreen extends StatelessWidget {
                   child: TextButton(
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.blue),
+                          MaterialStateProperty.all<Color>(Colors.orange),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.black)),
-                      ),
+                      // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      //  RoundedRectangleBorder(
+                      //      borderRadius: BorderRadius.circular(5.0),
+                      //      side: BorderSide(color: Colors.blue[50])),
+                      //  ),
+                      overlayColor:
+                          MaterialStateProperty.all<Color>(Colors.pink[700]),
                     ),
                     // Within the `FirstRoute` widget
                     onPressed: () {
@@ -88,15 +90,17 @@ class HomeScreen extends StatelessWidget {
                   padding: EdgeInsets.only(top: 02.0, bottom: 02.0),
                   child: TextButton(
                     style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.blue),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.redAccent[400]),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.black)),
-                      ),
+                      // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      //  RoundedRectangleBorder(
+                      //      borderRadius: BorderRadius.circular(18.0),
+                      //      side: BorderSide(color: Colors.black)),
+                      // ),
+                      overlayColor: MaterialStateProperty.all<Color>(
+                          Colors.blueAccent[400]),
                     ),
                     // Within the `FirstRoute` widget
                     onPressed: () {
