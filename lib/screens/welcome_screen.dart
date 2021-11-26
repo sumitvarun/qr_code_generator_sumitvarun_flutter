@@ -8,12 +8,10 @@ class WelcomeScreen extends StatelessWidget {
       title: 'QR Code Generator',
       home: Scaffold(
         body: Center(
-            child: Row(
+            child: Column(
           children: <Widget>[
             Container(
-              alignment: Alignment.bottomCenter,
               width: 200.0,
-              padding: EdgeInsets.only(top: 02.0, bottom: 02.0),
               child: TextButton(
                 style: ButtonStyle(
                   backgroundColor:
