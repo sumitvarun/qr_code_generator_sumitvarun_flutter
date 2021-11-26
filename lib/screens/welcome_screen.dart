@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_code_generator_sumitvarun/screens/homescreen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -33,7 +34,7 @@ class WelcomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => QrGenerater()),
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
                       );
                     },
                     child: Text("Generate QR Code "),
