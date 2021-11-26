@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_code_generator_sumitvarun/screens/welcome_screen.dart';
 
 import 'screens/homescreen.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: welcomeScreen(),
     );
   }
 }
