@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => QrGenerater()),
                       );
                     },
-                    child: Text("SCAN QR CODE"),
+                    child: Text("Scan QR Code"),
                   ),
                 ),
                 //scan qr code button start here
