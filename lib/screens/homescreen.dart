@@ -56,15 +56,20 @@ class HomeScreen extends StatelessWidget {
           child: Container(
             child: Column(
               children: <Widget>[
-                TextButton(
-                  // Within the `FirstRoute` widget
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => QrGenerater()),
-                    );
-                  },
-                  child: Text("SCAN QR CODE"),
+                Container(
+                  
+                  padding: EdgeInsets.only(top: 40.0, bottom: 20.0),
+                  child: TextButton(
+                    style: ,
+                    // Within the `FirstRoute` widget
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => QrGenerater()),
+                      );
+                    },
+                    child: Text("SCAN QR CODE"),
+                  ),
                 ),
                 //scan qr code button start here
                 TextButton(
