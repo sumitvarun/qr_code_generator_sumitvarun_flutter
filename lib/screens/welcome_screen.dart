@@ -11,6 +11,7 @@ class WelcomeScreen extends StatelessWidget {
             child: Row(
           children: <Widget>[
             Container(
+              alignment: Alignment.bottomCenter,
               width: 200.0,
               padding: EdgeInsets.only(top: 02.0, bottom: 02.0),
               child: TextButton(
