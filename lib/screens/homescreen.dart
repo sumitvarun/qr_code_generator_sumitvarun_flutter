@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_code_generator_sumitvarun/Component/button_style_const.dart';
 import 'package:qr_code_generator_sumitvarun/screens/qr_generate_page.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -57,22 +58,14 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Container(
+                  width: 200.0,
                   padding: EdgeInsets.only(top: 40.0, bottom: 20.0),
                   child: TextButton(
                     style: ButtonStyle(
-                      backgroundColor: ,
-                      foregroundColor:
+                      backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.blue),
-                      overlayColor: MaterialStateProperty.resolveWith<Color>(
-                        (Set<MaterialState> states) {
-                          if (states.contains(MaterialState.hovered))
-                            return Colors.blue.withOpacity(0.04);
-                          if (states.contains(MaterialState.focused) ||
-                              states.contains(MaterialState.pressed))
-                            return Colors.blue.withOpacity(0.12);
-                          return null; // Defer to the widget's default.
-                        },
-                      ),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
                     ),
                     // Within the `FirstRoute` widget
                     onPressed: () {
@@ -85,15 +78,25 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 //scan qr code button start here
-                TextButton(
-                  // Within the `FirstRoute` widget
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => QrGenerater()),
-                    );
-                  },
-                  child: Text("Generate QR Code "),
+                Container(
+                  width: 200.0,
+                  padding: EdgeInsets.only(top: 02.0, bottom: 02.0),
+                  child: TextButton(
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.blue),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                    ),
+                    // Within the `FirstRoute` widget
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => QrGenerater()),
+                      );
+                    },
+                    child: Text("Generate QR Code "),
+                  ),
                 ),
                 //scan qr code button end here
               ],

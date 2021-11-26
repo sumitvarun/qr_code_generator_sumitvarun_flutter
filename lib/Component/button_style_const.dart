@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 
 final ButtonStyle flatButtonStyle = TextButton.styleFrom(
@@ -16,8 +18,8 @@ final ButtonStyle flatButtonStyle = TextButton.styleFrom(
 //)
 
 final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
-  onPrimary: Colors.black87,
-  primary: Colors.grey[300],
+  onPrimary: Colors.red,
+  primary: Colors.blue,
   minimumSize: Size(88, 36),
   padding: EdgeInsets.symmetric(horizontal: 16),
   shape: const RoundedRectangleBorder(
@@ -32,22 +34,11 @@ final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
 //)
 
 final ButtonStyle outlineButtonStyle = OutlinedButton.styleFrom(
-  primary: Colors.black87,
+  primary: Colors.black,
   minimumSize: Size(88, 36),
   padding: EdgeInsets.symmetric(horizontal: 16),
   shape: const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(Radius.circular(2)),
-  ),
-).copyWith(
-  side: MaterialStateProperty.resolveWith<BorderSide>(
-    (Set<MaterialState> states) {
-      if (states.contains(MaterialState.pressed))
-        return BorderSide(
-          color: Theme.of(context).colorScheme.primary,
-          width: 1,
-        );
-      return null; // Defer to the widget's default.
-    },
   ),
 );
 
