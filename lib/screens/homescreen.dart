@@ -4,64 +4,64 @@ import 'package:qr_code_generator_sumitvarun/screens/qr_generate_page.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'QR CODE GENERATOR',
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.greenAccent[400],
-          title: Text(
-            "QR CODE GENERATOR",
-            style: TextStyle(color: Colors.black),
-          ),
-          centerTitle: true,
-          //leading: Icon(Icons.arrow_back),
-          //leading: IconButton(
-          //   icon: Icon(Icons.arrow_back),
-          //   onPressed: () => Navigator.of(context).pop()),
-          actions: [Icon(Icons.search)],
-          leading: IconButton(
-              icon: Icon(Icons.arrow_back),
-              onPressed: () => Navigator.of(context).pop()),
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(200),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 50.0, bottom: 40.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text(
-                        "Generate your QR CODE HERE",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400, fontSize: 16),
-                      ),
-                      CircleAvatar(
-                        radius: 50.0,
-                        backgroundImage:
-                            AssetImage("lib/asset/sumitvarunpngcartoon.png"),
-                      )
-                    ],
-                  ),
-                )
-              ],
+    return SafeArea(
+      child: MaterialApp(
+        title: 'QR CODE GENERATOR',
+        home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.greenAccent[400],
+            title: Text(
+              "QR CODE GENERATOR",
+              style: TextStyle(color: Colors.black),
             ),
+            centerTitle: true,
+            //leading: Icon(Icons.arrow_back),
+            //leading: IconButton(
+            //   icon: Icon(Icons.arrow_back),
+            //   onPressed: () => Navigator.of(context).pop()),
+            actions: [Icon(Icons.search)],
+            leading: IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () => Navigator.of(context).pop()),
+            bottom: PreferredSize(
+              preferredSize: Size.fromHeight(200),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 50.0, bottom: 40.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text(
+                          "Generate your QR CODE HERE",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400, fontSize: 16),
+                        ),
+                        CircleAvatar(
+                          radius: 50.0,
+                          backgroundImage:
+                              AssetImage("lib/asset/sumitvarunpngcartoon.png"),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(2000),
+                    bottomRight: Radius.circular(1000))),
           ),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(2000),
-                  bottomRight: Radius.circular(1000))),
-        ),
-        body: Center(
-          child: Container(
+          body: SafeArea(
             child: Row(
               children: <Widget>[
                 Container(
-                  width: 200.0,
-                  height: 180.0,
+                  width: 180.0,
+                  height: 110.0,
                   padding: EdgeInsets.only(top: 10.0, left: 20.0),
                   child: TextButton.icon(
                     style: ButtonStyle(
@@ -94,8 +94,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 //scan qr code button start here
                 Container(
-                  width: 220.0,
-                  height: 178.0,
+                  width: 180.0,
+                  height: 110.0,
                   padding: EdgeInsets.only(top: 10.0, left: 20.0),
                   child: TextButton.icon(
                     style: ButtonStyle(
