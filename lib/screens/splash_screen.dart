@@ -29,25 +29,17 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: Column(
-        children: [
-          Container(
-            child: Image(
-              image: AssetImage("lib/asset/icons8-qr-code-96.png"),
-              height: 200,
-              width: 200,
+      child: Center(
+        child: Column(
+          children: [
+            Image(
+              image: AssetImage("lib/asset/SUMITVARUN-logos_black.png"),
+              height: 400,
+              width: 400,
+              fit: BoxFit.cover,
             ),
-          ),
-          Container(
-            child: Text(
-              "QR Code Generator",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
