@@ -85,7 +85,10 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => QrGenerater()),
                       );
                     },
-                    icon: Icon(Icons.qr_code_scanner),
+                    icon: Icon(
+                      Icons.qr_code_scanner,
+                      size: 70.0,
+                    ),
                     label: Text('Scan QR'),
                     // child: Text("Scan QR Code"),
                   ),
@@ -116,7 +119,10 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => QrGenerater()),
                       );
                     },
-                    icon: Icon(Icons.qr_code_outlined),
+                    icon: Icon(
+                      Icons.qr_code_outlined,
+                      size: 70.0,
+                    ),
                     label: Text('Generate QR'),
                     //child: Text("Generate QR Code "),
                   ),
