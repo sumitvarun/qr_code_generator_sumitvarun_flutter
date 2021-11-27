@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_code_generator_sumitvarun/screens/splash_screen.dart';
 import 'package:qr_code_generator_sumitvarun/screens/welcome_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WelcomeScreen(),
+      home: SplashScreen(),
     );
   }
 }
