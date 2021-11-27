@@ -2,8 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:qr_code_generator_sumitvarun/screens/qr_generate_page.dart';
 
 class HomeScreen extends StatelessWidget {
+  var size, height, width, orientation;
+
   @override
   Widget build(BuildContext context) {
+    // getting the orientation of the app
+    orientation = MediaQuery.of(context).orientation;
+
+    // getting the size of the window
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
+
     return SafeArea(
       child: MaterialApp(
         title: 'QR CODE GENERATOR',
@@ -58,6 +68,8 @@ class HomeScreen extends StatelessWidget {
           ),
           body: SafeArea(
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Container(
                   width: 180.0,
