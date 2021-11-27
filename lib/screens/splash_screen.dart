@@ -31,10 +31,12 @@ class _SplashScreenState extends State<SplashScreen> {
       color: Colors.white,
       child: Column(
         children: [
-          Icon(
-            Icons.qr_code_outlined,
-            size: 400.0,
-            color: Colors.blueAccent,
+          Container(
+            child: Image(
+              image: AssetImage("lib/asset/icons8-qr-code-96.png"),
+              height: 200,
+              width: 200,
+            ),
           ),
           Container(
             child: Text(

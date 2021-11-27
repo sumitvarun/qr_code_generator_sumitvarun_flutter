@@ -50,7 +50,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - lib/asset/sumitvarunpngcartoon.png
-    - lib/asset/backgroundimage.jpg
+    - lib/asset/icons8-qr-code-96.png
+    #- lib/asset/backgroundimage.jpg
     # - images/a_dot_ham.jpeg
 
    
