@@ -36,6 +36,13 @@ class WelcomeScreen extends StatelessWidget {
                 child: Text("Welcome"),
               ),
             ),
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("lib/asset/backgroundimage.jpg"),
+                    fit: BoxFit.cover),
+              ),
+            ),
           ],
         )),
       ),
