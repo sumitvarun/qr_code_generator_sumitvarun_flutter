@@ -28,7 +28,25 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.white,
-        child: FlutterLogo(size: MediaQuery.of(context).size.height));
+      color: Colors.white,
+      child: Column(
+        children: [
+          Icon(
+            Icons.qr_code_outlined,
+            size: 400.0,
+            color: Colors.blueAccent,
+          ),
+          Container(
+            child: Text(
+              "QR Code Generator",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
