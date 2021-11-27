@@ -58,12 +58,13 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            child: Column(
+            child: Row(
               children: <Widget>[
                 Container(
                   width: 200.0,
-                  padding: EdgeInsets.only(top: 40.0, bottom: 20.0),
-                  child: TextButton(
+                  height: 180.0,
+                  padding: EdgeInsets.only(top: 10.0, left: 20.0),
+                  child: TextButton.icon(
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.orange),
@@ -84,14 +85,17 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => QrGenerater()),
                       );
                     },
-                    child: Text("Scan QR Code"),
+                    icon: Icon(Icons.qr_code_scanner),
+                    label: Text('Scan QR'),
+                    // child: Text("Scan QR Code"),
                   ),
                 ),
                 //scan qr code button start here
                 Container(
-                  width: 200.0,
-                  padding: EdgeInsets.only(top: 02.0, bottom: 02.0),
-                  child: TextButton(
+                  width: 220.0,
+                  height: 178.0,
+                  padding: EdgeInsets.only(top: 10.0, left: 20.0),
+                  child: TextButton.icon(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                           Colors.redAccent[400]),
@@ -112,7 +116,9 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => QrGenerater()),
                       );
                     },
-                    child: Text("Generate QR Code "),
+                    icon: Icon(Icons.qr_code_outlined),
+                    label: Text('Generate QR'),
+                    //child: Text("Generate QR Code "),
                   ),
                 ),
                 //scan qr code button end here
