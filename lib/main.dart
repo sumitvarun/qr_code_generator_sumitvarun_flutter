@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code_generator_sumitvarun/screens/splash_screen.dart';
-import 'package:qr_code_generator_sumitvarun/screens/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_generator_sumitvarun/Component/button_style_const.dart';
 import 'package:qr_code_generator_sumitvarun/screens/qr_generate_page.dart';
 
 class HomeScreen extends StatelessWidget {
