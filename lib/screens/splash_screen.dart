@@ -34,8 +34,8 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image(
               image: AssetImage("lib/asset/QR GEN-logos/QR GEN-logos.jpeg"),
-              height: 400,
-              width: 400,
+              height: 250,
+              width: 250,
               fit: BoxFit.cover,
             ),
           ],
