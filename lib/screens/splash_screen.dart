@@ -42,7 +42,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
                 Container(
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Image(
                         image:
