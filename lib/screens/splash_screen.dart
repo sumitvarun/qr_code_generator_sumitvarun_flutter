@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
           color: Colors.white,
           child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image(
