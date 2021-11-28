@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:qr_code_generator_sumitvarun/screens/homescreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -43,18 +44,25 @@ class _SplashScreenState extends State<SplashScreen> {
                 Container(
                   child: Column(
                     children: [
+                      Text(
+                        'From',
+                        style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal),
+                      ),
                       Image(
                         image:
                             AssetImage('lib/asset/SUMITVARUN-logos_black.png'),
-                        height: 70,
-                        width: 70,
+                        height: 100,
+                        width: 100,
                       ),
                       Text(
                         'SUMITVARUN',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 10,
-                        ),
+                        style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.normal),
                       ),
                     ],
                   ),
