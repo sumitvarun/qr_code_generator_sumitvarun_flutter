@@ -29,9 +29,11 @@ class _SplashScreenState extends State<SplashScreen> {
       color: Colors.white,
       child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image(
-              image: AssetImage("lib/asset/SUMITVARUN-logos_black.png"),
+              image: AssetImage("lib/asset/QR GEN-logos/QR GEN-logos.jpeg"),
               height: 400,
               width: 400,
               fit: BoxFit.cover,

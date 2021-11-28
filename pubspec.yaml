@@ -52,6 +52,7 @@ flutter:
     - lib/asset/sumitvarunpngcartoon.png
     - lib/asset/icons8-qr-code-96.png
     - lib/asset/SUMITVARUN-logos_black.png
+    - lib/asset/QR GEN-logos/QR GEN-logos.jpeg
     #- lib/asset/backgroundimage.jpg
     # - images/a_dot_ham.jpeg
 
