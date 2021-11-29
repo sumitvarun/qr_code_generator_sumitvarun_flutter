@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code_generator_sumitvarun/screens/qr_generate_page.dart';
+import 'package:qr_code_generator_sumitvarun/screens/scanpage.dart';
 
 class HomeScreen extends StatelessWidget {
   var size, height, width, orientation;
@@ -92,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => QrGenerater()),
+                      MaterialPageRoute(builder: (context) => QRScanPage()),
                     );
                   },
                   icon: Icon(
