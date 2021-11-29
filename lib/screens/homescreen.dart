@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => QRScanPage()),
+                      MaterialPageRoute(builder: (context) => QrGenerater()),
                     );
                   },
                   icon: Icon(
