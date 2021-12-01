@@ -11,20 +11,16 @@ import 'package:flutter/src/material/colors.dart';
 
 // ignore: camel_case_types
 class QrGenerater extends StatefulWidget {
-  const QrGenerater({key}) : super(key: key);
+  // const QrGenerater({key}) : super(key: key);
 
   @override
   _QrGeneraterState createState() => _QrGeneraterState();
 }
 
 class _QrGeneraterState extends State<QrGenerater> {
-  static const double _topSectionTopPadding = 50.0;
-  static const double _topSectionBottomPadding = 20.0;
-  static const double _topSectionHeight = 50.0;
-
+  final globalKey = GlobalKey();
   File file;
   String _dataString = "Hello from this QR";
-  String _inputErrorText;
   final TextEditingController _textController = TextEditingController();
 
   @override
@@ -80,13 +76,11 @@ class _QrGeneraterState extends State<QrGenerater> {
           child: Column(
             children: <Widget>[
               RepaintBoundary(
-                child: Container(
-                  color: Colors.white,
-                  child: QrImage(
-                    size: 150, //size of the QrImage widget.
-                    data: _dataString,
-                    gapless: false,
-                  ),
+                key: globalKey,
+                child: QrImage(
+                  size: 150, //size of the QrImage widget.
+                  data: _dataString,
+                  gapless: false,
                 ),
                 //QrImage(
                 //data: _dataString,
@@ -112,7 +106,6 @@ class _QrGeneraterState extends State<QrGenerater> {
                 onPressed: () async {
                   setState(() {
                     _dataString = _textController.text;
-                    _inputErrorText = null;
                   });
                 },
                 child: Text("CREATE QR CODE"),
@@ -120,30 +113,28 @@ class _QrGeneraterState extends State<QrGenerater> {
               ElevatedButton(
                 child: Text("Share"),
                 onPressed: _captureAndSharePng,
-              )
+              ),
             ],
           ),
         ),
       ),
     );
   }
-}
 
-final globalKey = GlobalKey();
-
-Future<void> _captureAndSharePng() async {
-  try {
-    RenderRepaintBoundary boundary =
-        globalKey.currentContext.findRenderObject();
-    var image = await boundary.toImage();
-    ByteData byteData = await image.toByteData(format: ImageByteFormat.png);
-    Uint8List pngBytes = byteData.buffer.asUint8List();
-    final tempDir = await getTemporaryDirectory();
-    final file = await new File('${tempDir.path}/image.png').create();
-    await file.writeAsBytes(pngBytes);
-    final channel = const MethodChannel('channel:me.alfian.share/share');
-    channel.invokeMethod('shareFile', 'image.png');
-  } catch (e) {
-    print(e.toString());
+  Future<void> _captureAndSharePng() async {
+    try {
+      RenderRepaintBoundary boundary =
+          globalKey.currentContext.findRenderObject();
+      var image = await boundary.toImage();
+      ByteData byteData = await image.toByteData(format: ImageByteFormat.png);
+      Uint8List pngBytes = byteData.buffer.asUint8List();
+      final tempDir = await getTemporaryDirectory();
+      final file = await new File('${tempDir.path}/image.png').create();
+      await file.writeAsBytes(pngBytes);
+      final channel = const MethodChannel('channel:me.alfian.share/share');
+      channel.invokeMethod('shareFile', 'image.png');
+    } catch (e) {
+      print(e.toString());
+    }
   }
 }
