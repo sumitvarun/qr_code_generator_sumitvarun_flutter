@@ -29,7 +29,7 @@ class _QrGeneraterState extends State<QrGenerater> {
       appBar: AppBar(
         backgroundColor: Colors.greenAccent[400],
         title: Text(
-          "QR CODE GENERATOR",
+          "QRGEN",
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,

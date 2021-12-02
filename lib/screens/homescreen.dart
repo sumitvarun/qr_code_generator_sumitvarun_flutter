@@ -16,12 +16,12 @@ class HomeScreen extends StatelessWidget {
     width = size.width;
 
     return MaterialApp(
-      title: 'QR CODE GENERATOR',
+      title: 'QRGEN',
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.greenAccent[400],
           title: Text(
-            "QR CODE GENERATOR",
+            "QRGEN",
             style: TextStyle(color: Colors.black),
           ),
           centerTitle: true,
@@ -30,9 +30,9 @@ class HomeScreen extends StatelessWidget {
           //   icon: Icon(Icons.arrow_back),
           //   onPressed: () => Navigator.of(context).pop()),
           actions: [Icon(Icons.search)],
-          leading: IconButton(
-              icon: Icon(Icons.arrow_back),
-              onPressed: () => Navigator.of(context).pop()),
+          // leading: IconButton(
+          //   icon: Icon(Icons.arrow_back),
+          //   onPressed: () => Navigator.of(context).pop()),
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(200),
             child: Column(
