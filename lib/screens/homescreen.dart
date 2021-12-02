@@ -18,18 +18,21 @@ class HomeScreen extends StatelessWidget {
     return MaterialApp(
       title: 'QRGEN',
       home: Scaffold(
+        backgroundColor: Colors.grey[900],
         appBar: AppBar(
-          backgroundColor: Colors.greenAccent[400],
+          backgroundColor: Colors.black,
+          shadowColor: Colors.white,
+
           title: Text(
             "QRGEN",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
           //leading: Icon(Icons.arrow_back),
           //leading: IconButton(
           //   icon: Icon(Icons.arrow_back),
           //   onPressed: () => Navigator.of(context).pop()),
-          actions: [Icon(Icons.search)],
+          //actions: [Icon(Icons.search)],
           // leading: IconButton(
           //   icon: Icon(Icons.arrow_back),
           //   onPressed: () => Navigator.of(context).pop()),
@@ -45,16 +48,28 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text(
-                        "Generate your QR CODE HERE",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400, fontSize: 16),
+                      Container(
+                        height: 50.0,
+                        width: 200.0,
+                        child: Text(
+                          "Scan & Generate your QR CODE HERE",
+                          style: TextStyle(
+                              color: Colors.tealAccent,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 13),
+                        ),
                       ),
-                      CircleAvatar(
-                        radius: 50.0,
-                        backgroundImage:
-                            AssetImage("lib/asset/sumitvarunpngcartoon.png"),
-                      )
+                      //CircleAvatar(
+                      //  radius: 50.0,
+                      //  backgroundImage:
+                      //      AssetImage("lib/asset/sumitvarunpngcartoon.png"),
+                      // ),
+                      Image(
+                        image: AssetImage(
+                            'lib/asset/QR GEN-logos/QR GEN-logos.jpeg'),
+                        width: 80.0,
+                        height: 80.0,
+                      ),
                     ],
                   ),
                 )
