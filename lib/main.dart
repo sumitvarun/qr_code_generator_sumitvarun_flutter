@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'QR Code Generator',
-      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Exo2'),
+      theme: ThemeData(fontFamily: 'Exo2'),
       home: SplashScreen(),
     );
   }
