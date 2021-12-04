@@ -18,9 +18,9 @@ class HomeScreen extends StatelessWidget {
     return MaterialApp(
       title: 'QRGEN',
       home: Scaffold(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.cyan[900],
           shadowColor: Colors.white,
 
           title: Text(
@@ -37,27 +37,23 @@ class HomeScreen extends StatelessWidget {
           //   icon: Icon(Icons.arrow_back),
           //   onPressed: () => Navigator.of(context).pop()),
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(200),
+            preferredSize: Size.fromHeight(100),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 50.0, bottom: 40.0),
+                  padding: EdgeInsets.only(left: 30.0, bottom: 40.0),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Container(
-                        height: 50.0,
-                        width: 200.0,
-                        child: Text(
-                          "Scan & Generate your QR CODE HERE",
-                          style: TextStyle(
-                              color: Colors.tealAccent,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 13),
-                        ),
+                      Text(
+                        "Scan & Generate your QR CODE HERE",
+                        style: TextStyle(
+                            color: Colors.cyan[50],
+                            fontWeight: FontWeight.w400,
+                            fontSize: 13),
                       ),
                       //CircleAvatar(
                       //  radius: 50.0,
@@ -67,8 +63,8 @@ class HomeScreen extends StatelessWidget {
                       Image(
                         image: AssetImage(
                             'lib/asset/QR GEN-logos/QR GEN-logos.jpeg'),
-                        width: 80.0,
-                        height: 80.0,
+                        width: 60.0,
+                        height: 60.0,
                       ),
                     ],
                   ),
