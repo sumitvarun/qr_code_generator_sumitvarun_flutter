@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:qr_code_generator_sumitvarun/screens/qr_generate_page.dart';
 import 'package:qr_code_generator_sumitvarun/screens/scanpage.dart';
 
@@ -18,14 +19,18 @@ class HomeScreen extends StatelessWidget {
     return MaterialApp(
       title: 'QRGEN',
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          backgroundColor: Colors.cyan[900],
+          backgroundColor: Colors.grey[350],
           shadowColor: Colors.black,
 
           title: Text(
             "QRGEN",
-            style: TextStyle(color: Colors.white),
+            style: GoogleFonts.exo2(
+              color: Colors.black,
+              fontWeight: FontWeight.normal,
+              fontSize: 48,
+            ),
           ),
           centerTitle: true,
           //leading: Icon(Icons.arrow_back),
@@ -50,10 +55,10 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         "Scan & Generate your QR CODE HERE",
-                        style: TextStyle(
-                            color: Colors.cyan[50],
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13),
+                        style: GoogleFonts.exo2(
+                          color: Colors.black,
+                          fontWeight: FontWeight.normal,
+                        ),
                       ),
                       //CircleAvatar(
                       //  radius: 50.0,
