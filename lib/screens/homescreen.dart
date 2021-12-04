@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.cyan[900],
-          shadowColor: Colors.white,
+          shadowColor: Colors.black,
 
           title: Text(
             "QRGEN",
