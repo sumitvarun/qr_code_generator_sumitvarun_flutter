@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(
-                        "Scan & Generate your QR CODE HERE",
+                        "Scan & Generate Your QR CODE Here",
                         style: GoogleFonts.exo2(
                           color: Colors.black,
                           fontWeight: FontWeight.normal,

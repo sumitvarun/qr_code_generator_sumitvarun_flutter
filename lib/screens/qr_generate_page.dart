@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:flutter/src/material/colors.dart';
@@ -27,10 +28,14 @@ class _QrGeneraterState extends State<QrGenerater> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.greenAccent[400],
+        backgroundColor: Colors.black,
         title: Text(
           "QRGEN",
-          style: TextStyle(color: Colors.black),
+          style: GoogleFonts.exo2(
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+            fontSize: 50,
+          ),
         ),
         centerTitle: true,
         // leading: Icon(Icons.arrow_back),
@@ -39,7 +44,7 @@ class _QrGeneraterState extends State<QrGenerater> {
             onPressed: () => Navigator.of(context).pop()),
         actions: [Icon(Icons.search)],
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(200),
+          preferredSize: Size.fromHeight(100),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -51,15 +56,17 @@ class _QrGeneraterState extends State<QrGenerater> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
-                      "Generate your QR CODE HERE",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      "Generate Your QR CODE Here",
+                      style: GoogleFonts.exo2(
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
                     ),
-                    CircleAvatar(
-                      radius: 50.0,
-                      backgroundImage:
-                          AssetImage("lib/asset/sumitvarunpngcartoon.png"),
-                    )
+                    // CircleAvatar(
+                    //  radius: 50.0,
+                    //  backgroundImage:
+                    // AssetImage("lib/asset/sumitvarunpngcartoon.png"),
+                    // )
                   ],
                 ),
               )
