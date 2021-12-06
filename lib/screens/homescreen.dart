@@ -83,79 +83,92 @@ class HomeScreen extends StatelessWidget {
                   bottomRight: Radius.circular(1000))),
         ),
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Container(
-                width: 180.0,
-                height: 110.0,
-                padding: EdgeInsets.only(top: 10.0, left: 20.0),
-                child: TextButton.icon(
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.orange),
-                    foregroundColor:
-                        MaterialStateProperty.all<Color>(Colors.white),
-                    // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    //  RoundedRectangleBorder(
-                    //      borderRadius: BorderRadius.circular(5.0),
-                    //      side: BorderSide(color: Colors.blue[50])),
-                    //  ),
-                    overlayColor:
-                        MaterialStateProperty.all<Color>(Colors.pink[700]),
-                  ),
-                  // Within the `FirstRoute` widget
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => QRViewExample()),
-                    );
-                  },
-                  icon: Icon(
-                    Icons.qr_code_scanner,
-                    size: 70.0,
-                  ),
-                  label: Text('Scan QR'),
-                  // child: Text("Scan QR Code"),
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                Image(
+                  image: AssetImage(
+                      'lib/asset/vecteezy_hands-and-qr-code-inside-smartphone-vector-design_-removebg-preview.png'),
+                  height: 300.0,
                 ),
-              ),
-              //scan qr code button start here
-              Container(
-                width: 180.0,
-                height: 110.0,
-                padding: EdgeInsets.only(top: 10.0, left: 20.0),
-                child: TextButton.icon(
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.redAccent[400]),
-                    foregroundColor:
-                        MaterialStateProperty.all<Color>(Colors.white),
-                    // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    //  RoundedRectangleBorder(
-                    //      borderRadius: BorderRadius.circular(18.0),
-                    //      side: BorderSide(color: Colors.black)),
-                    // ),
-                    overlayColor: MaterialStateProperty.all<Color>(
-                        Colors.blueAccent[400]),
-                  ),
-                  // Within the `FirstRoute` widget
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => QrGenerater()),
-                    );
-                  },
-                  icon: Icon(
-                    Icons.qr_code_outlined,
-                    size: 70.0,
-                  ),
-                  label: Text('Generate QR'),
-                  //child: Text("Generate QR Code "),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Container(
+                      width: 180.0,
+                      height: 110.0,
+                      padding: EdgeInsets.only(top: 10.0, left: 20.0),
+                      child: TextButton.icon(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(Colors.orange),
+                          foregroundColor:
+                              MaterialStateProperty.all<Color>(Colors.white),
+                          // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          //  RoundedRectangleBorder(
+                          //      borderRadius: BorderRadius.circular(5.0),
+                          //      side: BorderSide(color: Colors.blue[50])),
+                          //  ),
+                          overlayColor: MaterialStateProperty.all<Color>(
+                              Colors.pink[700]),
+                        ),
+                        // Within the `FirstRoute` widget
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => QRViewExample()),
+                          );
+                        },
+                        icon: Icon(
+                          Icons.qr_code_scanner,
+                          size: 70.0,
+                        ),
+                        label: Text('Scan QR'),
+                        // child: Text("Scan QR Code"),
+                      ),
+                    ),
+                    //scan qr code button start here
+                    Container(
+                      width: 180.0,
+                      height: 110.0,
+                      padding: EdgeInsets.only(top: 10.0, left: 20.0),
+                      child: TextButton.icon(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.redAccent[400]),
+                          foregroundColor:
+                              MaterialStateProperty.all<Color>(Colors.white),
+                          // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          //  RoundedRectangleBorder(
+                          //      borderRadius: BorderRadius.circular(18.0),
+                          //      side: BorderSide(color: Colors.black)),
+                          // ),
+                          overlayColor: MaterialStateProperty.all<Color>(
+                              Colors.blueAccent[400]),
+                        ),
+                        // Within the `FirstRoute` widget
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => QrGenerater()),
+                          );
+                        },
+                        icon: Icon(
+                          Icons.qr_code_outlined,
+                          size: 70.0,
+                        ),
+                        label: Text('Generate QR'),
+                        //child: Text("Generate QR Code "),
+                      ),
+                    ),
+                    //scan qr code button end here
+                  ],
                 ),
-              ),
-              //scan qr code button end here
-            ],
+              ],
+            ),
           ),
         ),
       ),
