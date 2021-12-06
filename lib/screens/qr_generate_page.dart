@@ -118,32 +118,34 @@ class _QrGeneraterState extends State<QrGenerater> {
               SizedBox(
                 height: 15.0,
               ),
-              ElevatedButton.icon(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.red[900],
+              Container(
+                height: 50.0,
+                child: ElevatedButton.icon(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      Colors.red[900],
+                    ),
+                    overlayColor: MaterialStateProperty.all<Color>(
+                      Colors.grey[800],
+                    ),
                   ),
-                  overlayColor: MaterialStateProperty.all<Color>(
-                    Colors.grey[800],
+                  onPressed: () async {
+                    setState(() {
+                      _dataString = _textController.text;
+                    });
+                  },
+                  icon: Icon(Icons.qr_code_2_outlined),
+                  label: Text(
+                    "CREATE QR CODE",
+                    style: TextStyle(color: Colors.grey[100]),
                   ),
-                ),
-                onPressed: () async {
-                  setState(() {
-                    _dataString = _textController.text;
-                  });
-                },
-                icon: Icon(Icons.qr_code_2_outlined),
-                label: Text(
-                  "CREATE QR CODE",
-                  style: TextStyle(color: Colors.grey[100]),
                 ),
               ),
               SizedBox(
                 height: 20.0,
               ),
               Container(
-                height: 70.0,
-                width: 120.0,
+                height: 50.0,
                 child: ElevatedButton.icon(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
@@ -154,10 +156,7 @@ class _QrGeneraterState extends State<QrGenerater> {
                     ),
                   ),
                   onPressed: _captureAndSharePng,
-                  icon: Icon(
-                    Icons.share_outlined,
-                    size: 50.0,
-                  ),
+                  icon: Icon(Icons.share_outlined),
                   label: Text(
                     "Share",
                     style: TextStyle(color: Colors.grey[100]),
