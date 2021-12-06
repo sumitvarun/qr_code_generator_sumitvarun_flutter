@@ -109,25 +109,60 @@ class _QrGeneraterState extends State<QrGenerater> {
               TextField(
                 controller: _textController,
                 decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.grey[300],
                     border: InputBorder.none,
-                    labelText: 'Enter Name',
-                    hintText: 'Enter Your Name'),
+                    labelText: 'Put Your Text_Data Here To Generate QR Code',
+                    hintText: 'Paste your text here'),
               ),
-              ElevatedButton(
+              SizedBox(
+                height: 15.0,
+              ),
+              ElevatedButton.icon(
                 style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.green),
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                    Colors.red[900],
+                  ),
+                  overlayColor: MaterialStateProperty.all<Color>(
+                    Colors.grey[800],
+                  ),
                 ),
                 onPressed: () async {
                   setState(() {
                     _dataString = _textController.text;
                   });
                 },
-                child: Text("CREATE QR CODE"),
+                icon: Icon(Icons.qr_code_2_outlined),
+                label: Text(
+                  "CREATE QR CODE",
+                  style: TextStyle(color: Colors.grey[100]),
+                ),
               ),
-              ElevatedButton(
-                child: Text("Share"),
-                onPressed: _captureAndSharePng,
+              SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                height: 70.0,
+                width: 120.0,
+                child: ElevatedButton.icon(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      Colors.blue[900],
+                    ),
+                    overlayColor: MaterialStateProperty.all<Color>(
+                      Colors.grey[800],
+                    ),
+                  ),
+                  onPressed: _captureAndSharePng,
+                  icon: Icon(
+                    Icons.share_outlined,
+                    size: 50.0,
+                  ),
+                  label: Text(
+                    "Share",
+                    style: TextStyle(color: Colors.grey[100]),
+                  ),
+                ),
               ),
             ],
           ),
