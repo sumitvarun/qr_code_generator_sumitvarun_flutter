@@ -27,12 +27,13 @@ class _QrGeneraterState extends State<QrGenerater> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey[350],
         title: Text(
           "QRGEN",
           style: GoogleFonts.exo2(
-            color: Colors.white,
+            color: Colors.black,
             fontWeight: FontWeight.normal,
             fontSize: 50,
           ),
@@ -58,9 +59,15 @@ class _QrGeneraterState extends State<QrGenerater> {
                     Text(
                       "Generate Your QR CODE Here",
                       style: GoogleFonts.exo2(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.normal,
                       ),
+                    ),
+                    Image(
+                      image: AssetImage(
+                          'lib/asset/QR GEN-logos/QR GEN-logos.jpeg'),
+                      width: 60.0,
+                      height: 60.0,
                     ),
                     // CircleAvatar(
                     //  radius: 50.0,
@@ -85,6 +92,7 @@ class _QrGeneraterState extends State<QrGenerater> {
               RepaintBoundary(
                 key: globalKey,
                 child: QrImage(
+                  backgroundColor: Colors.white,
                   size: 150, //size of the QrImage widget.
                   data: _dataString,
                   gapless: false,
