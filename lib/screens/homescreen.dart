@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                     Container(
                       width: 180.0,
                       height: 110.0,
-                      padding: EdgeInsets.only(top: 10.0, left: 20.0),
+                      padding: EdgeInsets.only(top: 10.0, left: 10.0),
                       child: TextButton.icon(
                         style: ButtonStyle(
                           backgroundColor:
