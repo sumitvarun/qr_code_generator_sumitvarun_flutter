@@ -89,7 +89,9 @@ class HomeScreen extends StatelessWidget {
                 Image(
                   image: AssetImage(
                       'lib/asset/vecteezy_hands-and-qr-code-inside-smartphone-vector-design_-removebg-preview.png'),
-                  height: 300.0,
+                  height: 200.0,
+                  width: MediaQuery.of(context).size.width,
+                  //   height: MediaQuery.of(context).size.height,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,6 +168,18 @@ class HomeScreen extends StatelessWidget {
                     ),
                     //scan qr code button end here
                   ],
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  // height: MediaQuery.of(context).size.height,
+                  height: 180.0,
+                  child: Image(
+                    image:
+                        AssetImage('lib/asset/banner/GENERATE QR CODE (1).png'),
+                  ),
                 ),
               ],
             ),
