@@ -1,3 +1,5 @@
+![GENERATE QR CODE (1)compress](https://user-images.githubusercontent.com/52107131/144990593-a7d8e356-2627-4ec2-8e07-efc7d094fafd.jpg)
+
 # QR CODE GENERATOR 
 
 ###### I created A new Flutter QR CODE GENERATOR project using 
