@@ -10,4 +10,5 @@
 
 
 ## SCREENSHOT
-<img src = 'https://user-images.githubusercontent.com/52107131/142620038-d3b1460e-848e-4aa4-adcc-5736cd784534.jpg' height = '400'>
+<div class = screenshot> <img src = 'https://user-images.githubusercontent.com/52107131/144991155-6512ab79-6aa2-46a7-aaff-bd6d9c26122f.jpg' height = '400'>
+<img src = 'https://user-images.githubusercontent.com/52107131/144991518-2d27ca12-e836-4f54-9a86-b3352acae1f0.jpg' height = '400'></div>
