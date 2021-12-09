@@ -24,7 +24,7 @@
 
 </div>
 
-### LICENSE
+## LICENSE
 #### MIT License
 
 ##### Copyright (c) 2021 SUMIT KUMAR
