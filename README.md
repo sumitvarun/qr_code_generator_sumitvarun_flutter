@@ -1,3 +1,8 @@
+[![GitHub issues](https://img.shields.io/github/issues/sumitvarun/QRGEN?style=for-the-badge)](https://github.com/sumitvarun/QRGEN/issues)
+[![GitHub forks](https://img.shields.io/github/forks/sumitvarun/QRGEN?style=for-the-badge)](https://github.com/sumitvarun/QRGEN/network)
+[![GitHub stars](https://img.shields.io/github/stars/sumitvarun/QRGEN?style=for-the-badge)](https://github.com/sumitvarun/QRGEN/stargazers)
+[![GitHub license](https://img.shields.io/github/license/sumitvarun/QRGEN?style=for-the-badge)](https://github.com/sumitvarun/QRGEN)
+
 ![GENERATE QR CODE (1)compress](https://user-images.githubusercontent.com/52107131/144990593-a7d8e356-2627-4ec2-8e07-efc7d094fafd.jpg)
 
 # QR CODE GENERATOR 
