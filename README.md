@@ -18,3 +18,8 @@
     <img src = "https://user-images.githubusercontent.com/52107131/145379822-06c72e9f-2829-4e2c-99ab-985f4dae3ecd.png" height = '400'>
 
 </div>
+
+### LICENSE
+#### MIT License
+
+##### Copyright (c) 2021 SUMIT KUMAR
