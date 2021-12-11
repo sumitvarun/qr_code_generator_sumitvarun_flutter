@@ -12,7 +12,8 @@
 ###### qr_flutter: ^4.0.0 ,
 ###### share_plus: ^3.0.1, 
 ###### path_provider: ^2.0.4
-
+###### google_fonts: ^2.1.0
+###### qr_code_scanner: ^0.6.1
 
 ## SCREENSHOT
 
