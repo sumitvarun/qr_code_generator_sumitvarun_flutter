@@ -3,7 +3,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/sumitvarun/QRGEN?style=for-the-badge)](https://github.com/sumitvarun/QRGEN/stargazers)
 [![GitHub license](https://img.shields.io/github/license/sumitvarun/QRGEN?style=for-the-badge)](https://github.com/sumitvarun/QRGEN)
 
-![GENERATE QR CODE (1)compress](https://user-images.githubusercontent.com/52107131/144990593-a7d8e356-2627-4ec2-8e07-efc7d094fafd.jpg)
+<!--![GENERATE QR CODE (1)compress](https://user-images.githubusercontent.com/52107131/144990593-a7d8e356-2627-4ec2-8e07-efc7d094fafd.jpg)-->
+
+![QRGEN](https://user-images.githubusercontent.com/52107131/145765798-f9625c3d-0658-4a47-b03f-f1a6fc05a6e7.png)
+
 
 # QR CODE GENERATOR 
 
